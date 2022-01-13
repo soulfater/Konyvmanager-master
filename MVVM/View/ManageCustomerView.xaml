@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="konyvManeger.MVVM.View.ManageCustomerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:konyvManeger.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="Transparent">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="18"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock  VerticalAlignment="Center" Text="Kölcsönző:"
+                       Foreground="#fff"
+                        FontSize="18"/>
+            <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Könyv:"
+                       Foreground="#fff"
+                        FontSize="18"/>
+            <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Időpont:"
+                       Foreground="#fff"
+                        FontSize="18"/>
+            
+            <TextBox Grid.Column="1" VerticalAlignment="Center" Name="Customer"
+                     FontSize="18"/>
+            <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Name="Book"
+                     FontSize="18"/>
+            <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Name="Date"
+                     FontSize="18"/>
+
+            <Button Grid.Row="3" Name="AddBtn" 
+                    Content="Hozzáadás"
+                    MaxWidth="100"
+                    Margin="5 10 0 0" Click="AddToList"/>
+            <Button Grid.Row="3" Grid.Column="1" Name="RemoveBtn"
+                    Content="Eltávolitás"
+                    MaxWidth="100"
+                    Margin="10 10 10 0" Click="DeleteItem"/>
+
+            <Button Grid.Row="4" Grid.ColumnSpan="2" Name="Download"
+                    Content="Letöltés"
+                    MaxWidth="100"
+                    Margin="-35 10 10 0" Click="DownloadCustomerList"/>
+        </Grid>
+
+        <ListView Grid.Column="1" Name="CustomerList" 
+                  Margin="15"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="1"
+                   HorizontalAlignment="Right"
+                   Name="FileName"
+                   Text="File Name:"
+                   Foreground="#fff"/>
+
+    </Grid>
+</UserControl>

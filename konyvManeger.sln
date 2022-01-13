@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "konyvManeger", "konyvManeger.csproj", "{9969F5B5-8241-4C32-BB85-5F4A6178519E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9969F5B5-8241-4C32-BB85-5F4A6178519E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9969F5B5-8241-4C32-BB85-5F4A6178519E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9969F5B5-8241-4C32-BB85-5F4A6178519E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9969F5B5-8241-4C32-BB85-5F4A6178519E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1DF3F2D-F896-4843-BC23-557E6903DD51}
+	EndGlobalSection
+EndGlobal

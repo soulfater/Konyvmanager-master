@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="konyvManeger.MVVM.View.ManageBooksView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:konyvManeger.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="Transparent">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="18"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock  VerticalAlignment="Center" Text="Könyv cim:"
+                       Foreground="#fff"
+                        FontSize="18"/>
+            <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Iro:"
+                       Foreground="#fff"
+                        FontSize="18"/>
+            <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="ISBN szám:"
+                       Foreground="#fff"
+                        FontSize="18"/>
+
+            <TextBox Grid.Column="1" VerticalAlignment="Center" Name="Title"
+                     FontSize="18"/>
+            <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Name="Author"
+                     FontSize="18"/>
+            <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Name="ISBNnum"
+                     FontSize="18"/>
+
+            <Button Grid.Row="3" Name="AddBookBtn" 
+                    Content="Hozzáadás"
+                    MaxWidth="100"
+                    Margin="5 10 0 0" Click="AddNewBook"/>
+            <Button Grid.Row="3" Grid.Column="1" Name="RemoveBookBtn"
+                    Content="Eltávolitás"
+                    MaxWidth="100"
+                    Margin="10 10 10 0" Click="RemoveBook"/>
+
+            <Button Grid.Row="4" Grid.ColumnSpan="2" Name="DownloadBookList"
+                    Content="Letöltés"
+                    MaxWidth="100"
+                    Margin="-35 10 10 0" Click="DownloadBooks"/>
+
+        </Grid>
+
+        <ListView Grid.Column="1" Name="BookList" 
+                  Margin="15">
+        </ListView>
+        
+        <TextBlock Grid.Row="1" Grid.Column="1"
+                   HorizontalAlignment="Right"
+                   Name="FileName"
+                   Text="File Name:"
+                   Foreground="#fff"/>
+
+    </Grid>
+</UserControl>
